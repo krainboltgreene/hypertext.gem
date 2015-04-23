@@ -1,0 +1,96 @@
+module Hypertext
+  class Tag
+    GLOBAL_ATTRIBUTE_KEYS = ["accesskey", "class", "contenteditable", "dir", "hidden", "id", "lang", "spellcheck", "style", "tabindex", "title", "translate"]
+
+    def initialize(attributes:)
+      @attributes = attributes
+    end
+
+    def name
+      self.class.name.downcase
+    end
+
+    def end_tag?
+      true
+    end
+
+    require_relative "tag/a"
+    require_relative "tag/abbr"
+    require_relative "tag/acronym"
+    require_relative "tag/address"
+    require_relative "tag/area"
+    require_relative "tag/b"
+    require_relative "tag/base"
+    require_relative "tag/bdo"
+    require_relative "tag/big"
+    require_relative "tag/blockquote"
+    require_relative "tag/body"
+    require_relative "tag/br"
+    require_relative "tag/button"
+    require_relative "tag/caption"
+    require_relative "tag/cite"
+    require_relative "tag/code"
+    require_relative "tag/col"
+    require_relative "tag/colgroup"
+    require_relative "tag/dd"
+    require_relative "tag/del"
+    require_relative "tag/dfn"
+    require_relative "tag/div"
+    require_relative "tag/dl"
+    require_relative "tag/DOCTYPE"
+    require_relative "tag/dt"
+    require_relative "tag/em"
+    require_relative "tag/fieldset"
+    require_relative "tag/form"
+    require_relative "tag/h1"
+    require_relative "tag/h2"
+    require_relative "tag/h3"
+    require_relative "tag/h4"
+    require_relative "tag/h5"
+    require_relative "tag/h6"
+    require_relative "tag/head"
+    require_relative "tag/hr"
+    require_relative "tag/hypertext"
+    require_relative "tag/i"
+    require_relative "tag/img"
+    require_relative "tag/input"
+    require_relative "tag/ins"
+    require_relative "tag/kbd"
+    require_relative "tag/label"
+    require_relative "tag/legend"
+    require_relative "tag/li"
+    require_relative "tag/link"
+    require_relative "tag/map"
+    require_relative "tag/meta"
+    require_relative "tag/noscript"
+    require_relative "tag/object"
+    require_relative "tag/ol"
+    require_relative "tag/optgroup"
+    require_relative "tag/option"
+    require_relative "tag/p"
+    require_relative "tag/param"
+    require_relative "tag/pre"
+    require_relative "tag/q"
+    require_relative "tag/samp"
+    require_relative "tag/script"
+    require_relative "tag/select"
+    require_relative "tag/small"
+    require_relative "tag/span"
+    require_relative "tag/strong"
+    require_relative "tag/style"
+    require_relative "tag/sub"
+    require_relative "tag/sup"
+    require_relative "tag/table"
+    require_relative "tag/tbody"
+    require_relative "tag/td"
+    require_relative "tag/textarea"
+    require_relative "tag/tfoot"
+    require_relative "tag/th"
+    require_relative "tag/thead"
+    require_relative "tag/title"
+    require_relative "tag/tr"
+    require_relative "tag/tt"
+    require_relative "tag/ul"
+    require_relative "tag/var"
+  end
+end
