@@ -1,25 +1,43 @@
-blankgem
---------
+hypertext
+---------
 
-  - [![Quality](http://img.shields.io/codeclimate/github/krainboltgreene/blankgem.gem.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/blankgem.gem)
-  - [![Coverage](http://img.shields.io/codeclimate/coverage/github/krainboltgreene/blankgem.gem.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/blankgem.gem)
-  - [![Build](http://img.shields.io/travis-ci/krainboltgreene/blankgem.gem.svg?style=flat-square)](https://travis-ci.org/krainboltgreene/blankgem.gem)
-  - [![Dependencies](http://img.shields.io/gemnasium/krainboltgreene/blankgem.gem.svg?style=flat-square)](https://gemnasium.com/krainboltgreene/blankgem.gem)
-  - [![Downloads](http://img.shields.io/gem/dtv/blankgem.svg?style=flat-square)](https://rubygems.org/gems/blankgem)
-  - [![Tags](http://img.shields.io/github/tag/krainboltgreene/blankgem.gem.svg?style=flat-square)](http://github.com/krainboltgreene/blankgem.gem/tags)
-  - [![Releases](http://img.shields.io/github/release/krainboltgreene/blankgem.gem.svg?style=flat-square)](http://github.com/krainboltgreene/blankgem.gem/releases)
-  - [![Issues](http://img.shields.io/github/issues/krainboltgreene/blankgem.gem.svg?style=flat-square)](http://github.com/krainboltgreene/blankgem.gem/issues)
+  - [![Quality](http://img.shields.io/codeclimate/github/krainboltgreene/hypertext.gem.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/hypertext.gem)
+  - [![Coverage](http://img.shields.io/codeclimate/coverage/github/krainboltgreene/hypertext.gem.svg?style=flat-square)](https://codeclimate.com/github/krainboltgreene/hypertext.gem)
+  - [![Build](http://img.shields.io/travis-ci/krainboltgreene/hypertext.gem.svg?style=flat-square)](https://travis-ci.org/krainboltgreene/hypertext.gem)
+  - [![Dependencies](http://img.shields.io/gemnasium/krainboltgreene/hypertext.gem.svg?style=flat-square)](https://gemnasium.com/krainboltgreene/hypertext.gem)
+  - [![Downloads](http://img.shields.io/gem/dtv/hypertext.svg?style=flat-square)](https://rubygems.org/gems/hypertext)
+  - [![Tags](http://img.shields.io/github/tag/krainboltgreene/hypertext.gem.svg?style=flat-square)](http://github.com/krainboltgreene/hypertext.gem/tags)
+  - [![Releases](http://img.shields.io/github/release/krainboltgreene/hypertext.gem.svg?style=flat-square)](http://github.com/krainboltgreene/hypertext.gem/releases)
+  - [![Issues](http://img.shields.io/github/issues/krainboltgreene/hypertext.gem.svg?style=flat-square)](http://github.com/krainboltgreene/hypertext.gem/issues)
   - [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-  - [![Version](http://img.shields.io/gem/v/blankgem.svg?style=flat-square)](https://rubygems.org/gems/blankgem)
+  - [![Version](http://img.shields.io/gem/v/hypertext.svg?style=flat-square)](https://rubygems.org/gems/hypertext)
 
 
-TODO: Write a gem description
+A gem for creating an Hypertext DOM tree in memory, a dsl for writing Hypertext, and a set of validations.
 
 
 Using
 =====
 
-TODO: Write usage instructions here
+There are three parts to hypertext:
+
+  1. The objects:
+    ``` ruby
+    Hypertext::Element.new(Hypertext::Tag::Doctype, [Hypertext::Element.new(Hypertext::Tag::Hypertext)], html: "5")
+    ```
+
+  2. The DSL:
+    ``` ruby
+    Hypertext::DSL.new do
+      doctype html: 5
+      html(lang: "eng", class: "no-js") do
+        head do
+          title { "" }
+          meta content
+        end
+      end
+    end
+    ```
 
 
 Installing
@@ -27,7 +45,7 @@ Installing
 
 Add this line to your application's Gemfile:
 
-    gem "blankgem", "~> 1.0"
+    gem "hypertext", "~> 1.0"
 
 And then execute:
 
@@ -35,7 +53,7 @@ And then execute:
 
 Or install it yourself with:
 
-    $ gem install blankgem
+    $ gem install hypertext
 
 
 Contributing
